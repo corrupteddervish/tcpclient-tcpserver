@@ -1,1 +1,15 @@
-Under Constraction !!!
+Here is simple TCP client and server. 
+
+In the directories (tcp-client or tcp-server) you can simply "make all". It will work on most linux OS. 
+
+You can enter message after run tcp client or you can enter the message as parameter (after every word, automatically space will be added). 
+
+On the server side, you can see simple "select" structure used. 
+
+client usage : 
+./tcp-client [ip] [port] 
+or 
+./tcp-client [ip] [port] [message]
+
+server usage :
+./tcp-server [port]
