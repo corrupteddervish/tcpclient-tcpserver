@@ -1,10 +1,3 @@
-/*
- * tcp-client.c
- *
- *  Created on: Nov 8, 2016
- *      Author: dervis
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -15,9 +8,6 @@
 #include <errno.h>
 #include <unistd.h>
 #include <string.h>
-
-
-
 
 #include "tcp-client.h"
 

@@ -1,10 +1,3 @@
-/*
- * tcp-server.c
- *
- *  Created on: Nov 9, 2016
- *      Author: dervis
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -17,7 +10,7 @@
 #include "tcp-server.h"
 
 #define MAX_CONNECTION 10
-#define MAX_MESSAGE_SIZE 5
+#define MAX_MESSAGE_SIZE 1024
 
 #define IS_BIGGER(a,b) ((a) > (b) ? (a) : (b))
 
@@ -28,7 +21,6 @@ static int bind_socket(int portno){
 
 	fd = socket(AF_INET,SOCK_STREAM,0);
 
-	//hatanın ne olduğunu yaz...
 	if(fd==-1){
 		fprintf(stdout,"Error while opening port.");
 		return -1;
@@ -110,7 +102,7 @@ int receiveTcpPacket(int portno){
 
     	fprintf(stdout,"New message ! \n");
 
-    	//fd 0 for keyboard, fd 1 is for mouse, fd 2 is for screen
+    	//fd 0 for input, 1 and 2 for output(stdout, stderr).
     	for(fds = 3 ; fds<=max_fd ; fds++){
 
     		if(fds == socket_fd){
